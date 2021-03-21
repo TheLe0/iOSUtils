@@ -60,7 +60,7 @@ class VideoUtil {
     NotificationCenter.default.addObserver(self,
       selector: #selector(VideoUtil.videoEnd),
       name: NSNotification.Name(
-        rawValue: ""AVPlayerItemDidPlayToEndTimeNotification"    
+        rawValue: "AVPlayerItemDidPlayToEndTimeNotification"    
       ),
       object: nil
     )
