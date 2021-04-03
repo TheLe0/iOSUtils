@@ -9,8 +9,15 @@ class StringUtil {
     return s! as String
   }
   
+  // String to Data
   class func toNSData(_ s: String) -> Data {
     let data = s.data(using: String.Encoding.utf8)
     return data!
+  }
+  
+  // String to const char *
+  class func toCString(_ s: String) -> UnsafePointer<Int8> {
+    let cstring = (s as NSString).utf8String
+    return cstring! 
   }
 }
